@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="app">
+        <header class="header">
+            <span class="eyebrow">STUDENT TOOLS</span>
+            <h1>Grade Calculator</h1>
+            <p>Enter your marks and calculate your results.</p>
+        </header>
+
+        <form id="gradeForm" novalidate>
+            <div class="subjects-heading">
+                <h2>Subject Marks</h2>
+                <span>Each subject is out of 100</span>
+            </div>
+
+            <div id="subjects"></div>
+
+            <button type="button" id="addSubject" class="btn btn-light">
+                + Add Subject
+            </button>
+
+            <p id="error" class="error" role="alert"></p>
+
+            <div class="actions">
+                <button type="submit" class="btn btn-primary">
+                    Calculate Results
+                </button>
+                <button type="reset" class="btn btn-light">
+                    Reset
+                </button>
+            </div>
+        </form>
+
+        <section id="results" class="results" aria-live="polite" hidden>
+            <h2>Your Results</h2>
+            <div class="result-grid">
+                <div class="result-card">
+                    <span>Total Marks</span>
+                    <strong id="total">0 / 0</strong>
+                </div>
+                <div class="result-card">
+                    <span>Percentage</span>
+                    <strong id="percentage">0%</strong>
+                </div>
+                <div class="result-card grade-card">
+                    <span>Final Grade</span>
+                    <strong id="grade">—</strong>
+                </div>
+            </div>
+        </section>
+
+        <footer>Student Grade Calculator · Week 1 Project</footer>
+    </main>
+</body>
+
+</html>
